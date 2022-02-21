@@ -1,0 +1,276 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smile Face</title>
+    <link rel="stylesheet" href="css.css" />
+<style>
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+}
+
+.container {
+  background-color: #b1b1b1;
+  width: 100%;
+  height: 100vh;
+}
+
+.container .face {
+  background-color: #fdb940;
+  width: 600px;
+  height: 500px;
+  border-radius: 100px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 20px 1px #b98528;
+  transform: translate(-50%, -50%) scale(.5);
+}
+
+.right-eye,
+.left-eye {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.left-eye {
+  right: 60%;
+}
+
+.right-eye {
+  left: 60%;
+}
+
+.inner {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  top: 50px;
+  transition: .5s;
+}
+
+.britness1,
+.britness2 {
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.britness1 {
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  top: 16px;
+}
+
+.britness2 {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  top: 40px;
+}
+
+.khodod-left,
+.khodod-right {
+  background-color: #fbab47;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 56%;
+}
+
+.khodod-right {
+  left: 65%;
+}
+
+.khodod-left {
+  right: 65%;
+}
+
+.noze {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  transform: translateX(-50%);
+}
+
+.noze .to-hide {
+  width: 110px;
+  height: 110px;
+  background-color: #fdb940;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.noze .toShow {
+  width: 85px;
+  height: 70px;
+  background-color: rgb(105, 175, 35);
+  background-color: #e29125;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 55px;
+  z-index: -1;
+}
+
+.mouth-parent {
+  width: 135px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+}
+
+.mouth {
+  background-color: black;
+  width: 135px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+
+.mouth-parent .Tongue {
+  background-color: #ff0000;
+  width: 80px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouth-parent .hide {
+  width: 160px;
+  height: 108px;
+  background-color: #fdb940;
+  position: absolute;
+  top: -25px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouth .teeth1,
+.teeth2 {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+  bottom: 31px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.mouth .teeth2 {
+  left: 52%;
+}
+
+.mouth .teeth1 {
+  right: 52%;
+}
+
+.brow-left,
+.brow-right {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #975e26;
+  position: absolute;
+  transform: rotate(-20deg);
+  top: 40px;
+  transition: .5s;
+}
+
+.brow-left {
+  right: 60%;
+}
+
+.brow-right {
+  left: 60%;
+  transform: rotate(20deg);
+}
+
+.brow-left .hide,
+.brow-right .hide {
+  width: 180px;
+  height: 100%;
+  background-color: #fdb940;
+  /* background-color: #383838; */
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15px;
+}
+
+.face:hover .inner {
+  right: 60px;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="face">
+        <div class="right-eye">
+          <div class="inner">
+            <div class="britness1"></div>
+            <div class="britness2"></div>
+          </div>
+        </div>
+        <div class="left-eye">
+          <div class="inner">
+            <div class="britness1"></div>
+            <div class="britness2"></div>
+          </div>
+        </div>
+        <div class="khodod-left"></div>
+        <div class="khodod-right"></div>
+        <div class="noze">
+          <div class="to-hide"></div>
+          <div class="toShow"></div>
+        </div>
+        <div class="mouth-parent">
+          <div class="mouth">
+            <div class="Tongue"></div>
+            <div class="teeth1"></div>
+            <div class="teeth2"></div>
+          </div>
+          <div class="hide"></div>
+        </div>
+        <div class="brow-right">
+          <div class="hide"></div>
+          <div class="brow"></div>
+        </div>
+        <div class="brow-left">
+          <div class="hide"></div>
+          <div class="brow"></div>
+        </div>
+      </div>
+    </div>
+   
+  </body>
+</html>
